@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2026/07/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>经典力学1: 拉格朗日表述</title>
+    <url>/2026/07/25/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A61-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E8%A1%A8%E8%BF%B0/</url>
+    <content><![CDATA[<h2 id="最小作用量原理"><a href="#最小作用量原理" class="headerlink" title="最小作用量原理"></a>最小作用量原理</h2><p>对于任意一个力学系统, 其运动方程可以由拉格朗日函数完全描述<br>$$<br>L(q_{1},\dots,q_{s},\dot{q}<em>{1},\dots,\dot{q}</em>{s},t)<br>$$<br>其中, $q_{1},\dots,q_{s}$描述系统的位置或构型, 称为广义坐标; $\dot{q}<em>{1},\dots,\dot{q}</em>{s}$描述系统的速度, 称为广义速度, $s$是这个力学系统的自由度. 系统的运动方程由最小作用量原理导出, 如果给定系统在$t_1$时刻和$t_2$时刻的广义坐标, 系统的真实运动使得作用量<br>$$<br>S&#x3D;\int_{t_{1}}^{t_{2}}L(q_{1},\dots,q_{s},\dot{q}<em>{1},\dots,\dot{q}</em>{s},t),\mathrm{d} t<br>$$<br>取最小值. 不失一般性, 假设系统只有一个自由度, 如果我们把使得作用量取极小值的真实运动路径记做$q(t)$, 任意关于真实路径的无穷小偏离$\delta q(t)$都会使得$S$增大. 最小作用量原理要求$\delta q(t)$对$S$的一阶影响为$0$, 换言之<br>$$<br>\delta S&#x3D;0<br>$$<br>下面我们计算作用量的变分<br>$$<br>\begin{align}<br>\delta S&amp;&#x3D;\delta\int_{t_{1}}^{t_{2}}L(q,\dot{q},t),\mathrm{d} t\<br>&amp;&#x3D;\int_{t_{1}}^{t_{2}}\left[\frac{\partial L}{\partial q}\delta q+\frac{\partial L}{\partial\dot{q}}\delta\dot{q}\right]\mathrm{d} t\<br>&amp;&#x3D;\left.\frac{\partial L}{\partial\dot{q}}\delta q\right|<em>{t</em>{1}}^{t_{2}}+\int_{t_{1}}^{t_{2}}\left[\frac{\partial L}{\partial q}\delta q-\frac{\mathrm{d}}{\mathrm{d} t}\frac{\partial L}{\partial\dot{q}}\delta q\right]\mathrm{d} t\<br>&amp;&#x3D;\int_{t_{1}}^{t_{2}}\left(\frac{\partial L}{\partial q}-\frac{\mathrm{d}}{\mathrm{d} t}\frac{\partial L}{\partial\dot{q}}\right)\delta q(t)\mathrm{d} t<br>\end{align}<br>$$<br>因为在边界处满足$\delta q(t_{1})&#x3D;\delta q(t_{2})&#x3D;0$, 所以第三行的第一项为$0$. 由于对于任意的$\delta q$, $\delta S$都为$0$, 这只有在被积函数恒等于$0$的时候才有可能成立. 于是我们得到方程<br>$$<br>\frac{\mathrm{d}}{\mathrm{d} t}\frac{\partial L}{\partial\dot{q}}-\frac{\partial L}{\partial q}&#x3D;0<br>$$<br>这个方程称为欧拉-拉格朗日方程. 拉格朗日方程是一个二阶微分方程, 这意味着给定系统在某一时刻的广义坐标和广义速度, 系统接下来的运动就完全确定了, 这符合实验事实. 这也是拉格朗日函数只依赖广义坐标的一阶导数的原因.</p>
+<p>对于无相互作用的两个系统 A 和 B , 总的拉格朗日量应当为两个系统的拉格朗日量之和<br>$$<br>L&#x3D;L_{A}+L_{B}<br>$$<br>这是因为, 既然 A 和 B 之间没有相互作用, 即子系统的运动方程只由子系统的拉格朗日量决定, 且拉格朗日量中不应依赖另外一个子系统的广义坐标.</p>
+<p>拉格朗日量的定义可以差一个关于时间和坐标的全导数<br>$$<br>L\to L+\frac{\mathrm{d} f(q,t)}{\mathrm{d} t}<br>$$<br>这是因为这一项对作用量的贡献是纯边界项, 在变分时为$0$, 不影响运动方程.</p>
+<h2 id="伽利略相对性原理"><a href="#伽利略相对性原理" class="headerlink" title="伽利略相对性原理"></a>伽利略相对性原理</h2><p>在描述力学系统时, 参考系的选取是任意的. 然而, 实验表明似乎存在一类特殊的参考系, 在这类参考系中物理规律具有时间和空间的平移不变性以及空间的旋转不变性; 具体而言, 孤立系统的运动方程在任意的时间和空间平移变换<br>$$<br>\boldsymbol{x}\to\boldsymbol{x}+\boldsymbol{\epsilon}\qquad t\to t+\epsilon<br>$$<br>以及旋转变换下保持不变, 这类参考系称为惯性参考系. 有时会将这样的性质表述为, 时间在惯性参考系中是均匀的, 空间是均匀各向同性的.</p>
+<p>实验表明, 惯性参考系中的运动方程在伽利略变换<br>$$<br>\begin{align}<br>\boldsymbol{x}’	&amp;&#x3D;\boldsymbol{x}+\boldsymbol{V}t\<br>t’&amp;&#x3D;t<br>\end{align}<br>$$<br>下保持不变, 这个事实被称为伽利略相对性原理. 事实上, 伽利略变换定义了一个新的惯性参考系, 这个参考系相对于原参考系做匀速直线运动. 上面  t ‘ &#x3D; t  是经典力学中重要的绝对时间假设.</p>
+<p>有意思的是, 如果我们用时空均匀性和各向同性定义惯性参考系, 这意味着两个惯性参考系中的时空坐标变换一定是线性的.</p>
+<h2 id="自由质点的拉格朗日量"><a href="#自由质点的拉格朗日量" class="headerlink" title="自由质点的拉格朗日量"></a>自由质点的拉格朗日量</h2><p>对于惯性参考系中的自由质点, 为了保证其运动方程在时间和空间平移下保持不变, 不妨令其拉格朗日量不显含时间和空间坐标. 由于惯性系中的运动方程具有各向同性, 自由质点的拉格朗日量只能是速度平方的函数$L&#x3D;L(v^{2})$. 根据欧拉拉格朗日方程, 自由质点的运动方程<br>$$<br>\frac{\mathrm{d}}{\mathrm{d} t}\frac{\partial L}{\partial\boldsymbol{v}}&#x3D;0<br>$$<br>这意味着速度必然是常数, 也就是说, 自由质点在惯性参考系中静止或者做匀速直线运动.</p>
+<p>为了导出自由质点拉格朗日量的具体形式, 我们考虑做无穷小伽利略变换$\boldsymbol{x}\mapsto\boldsymbol{x}+\boldsymbol{\epsilon}t$, 新坐标系中的拉格朗日量为<br>$$<br>L(v^{2}+2\boldsymbol{v}\cdot\boldsymbol{\epsilon}+\cdots)\approx L(v^{2})+2\frac{\partial L}{\partial v^{2}}\boldsymbol{v}\cdot\boldsymbol{\epsilon}+\mathcal{O}(\epsilon^{2})<br>$$<br>如果想要让运动方程在任意的无穷小$\boldsymbol{\epsilon}$保持不变, 即第二项是时间的全导数,  $L$必须是$v^2$ 的线性函数. 因此自由质点的拉格朗日量可以写为<br>$$<br>L&#x3D;\frac{1}{2}mv^{2}<br>$$<br>这里$m$定义了质点的质量.</p>
+<h2 id="质点系的拉格朗日量"><a href="#质点系的拉格朗日量" class="headerlink" title="质点系的拉格朗日量"></a>质点系的拉格朗日量</h2><p>对于孤立质点系, 如果质点间没有相互作用, 其拉格朗日量是所有自由质点的拉氏量之和<br>$$<br>L&#x3D;\sum_{i}\frac{1}{2}m_{i}v_{i}^{2}<br>$$<br>为了描述质点系之间的相互作用, 我们可以引入一个关于坐标的函数$U$将拉氏量写为<br>$$<br>L&#x3D;\sum_{i}\frac{1}{2}m_{i}v_{i}^{2}-U(\boldsymbol{r}<em>{1},\boldsymbol{r}</em>{2},\dots)<br>$$<br>函数$U$称为质点系的相互作用势能, 第一项称为质点系的动能$T$. 这里的负号是必要的, 计算拉格朗日方程我们得到<br>$$<br>m_{i}\frac{\mathrm{d}\boldsymbol{v}<em>{i}}{\mathrm{d} t}&#x3D;-\nabla</em>{\boldsymbol{r}_{i}}U<br>$$<br>这样与牛顿力学里的形式一致. 这里相互作用势能只依赖于不同质点的位置, 这意味着一个质点位置的改变会瞬时影响所有质点, 这是一个假设, 仅在经典力学里成立.</p>
+<p>如果不使用笛卡尔坐标描述系统, 而用一般的广义坐标<br>$$<br>x_{a}&#x3D;f_{a}(q_{1},\dots,q_{s})\qquad\dot{x}<em>{a}&#x3D;\sum</em>{k}\frac{\partial f_{a}}{\partial q_{k}}\dot{q}<em>{k}<br>$$<br>质点系的动能仍然具有二次型的形式<br>$$<br>T&#x3D;\frac{1}{2}\sum</em>{i,k}a_{ik}(q)\dot{q}<em>{i}\dot{q}</em>{k}<br>$$<br>现在我们考虑质点系$A$与运动完全已知的质点系$B$相互作用. 质点系$A$的拉格朗日量可以通过将完整孤立系统$A + B$的拉格朗日量<br>$$<br>L&#x3D;L_{A}(q_{A},\dot{q}<em>{A})+L</em>{B}(q_{B},\dot{q}<em>{B})-U(q</em>{A},q_{B})<br>$$<br>中质点系$B$的广义坐标 $q_B$ 用给定的关于时间的函数替代得到. 这样第二项$L_b$是关于时间的函数, 可以从$L$中略去, 于是<br>$$<br>L&#x3D;T_{A}(q_{A},\dot{q}<em>{A})-U(q</em>{A},q_{B}(t))<br>$$</p>
 ]]></content>
+      <categories>
+        <category>physics</category>
+        <category>classical mechanics</category>
+      </categories>
   </entry>
 </search>

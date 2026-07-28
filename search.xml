@@ -157,6 +157,226 @@ class="math inline">\(q_B\)</span> 用给定的关于时间的函数替代得到
 class="math display">\[
 L=T_{A}(q_{A},\dot{q}_{A})-U(q_{A},q_{B}(t))
 \]</span></p>
+<h2 id="参考文献">参考文献</h2>
+<p>[1] 朗道, 力学</p>
+]]></content>
+      <categories>
+        <category>physics</category>
+        <category>classical mechanics</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>经典力学2-对称性与守恒律</title>
+    <url>/2026/07/29/%E7%BB%8F%E5%85%B8%E5%8A%9B%E5%AD%A62-%E5%AF%B9%E7%A7%B0%E6%80%A7%E4%B8%8E%E5%AE%88%E6%81%92%E5%BE%8B/</url>
+    <content><![CDATA[<h2 id="能量">能量</h2>
+<p>在力学系统运动过程中, 存在一些关于广义坐标和广义速度的函数,
+其值在运动过程中保持恒定, 这样的函数称为运动积分.</p>
+<p>对于具有<span class="math inline">\(s\)</span>个自由度的封闭系统,
+可以通过下面的方法构造出<span
+class="math inline">\(2s-1\)</span>个运动积分. <span
+class="math inline">\(s\)</span>个自由度的系统的运动方程通解中存在<span
+class="math inline">\(2s\)</span>个常数<span
+class="math inline">\(C_{1},C_{2},\dots\)</span> .
+由于封闭系统具有时间平移不变性, 时间平移后的运动轨迹<span
+class="math inline">\(q(t)\mapsto q(t+t_{0})\)</span>仍然是运动方程的解,
+因此我们可以将其中一个常数选择为<span
+class="math inline">\(t_{0}\)</span>, 从下面的<span
+class="math inline">\(2s\)</span>条方程 <span class="math display">\[
+\begin{align}
+q_{i}&amp;=q_{i}(t+t_{0},C_{1},\dots,C_{2s-1})\\
+\dot{q}_{i}&amp;=\dot{q}_{i}(t+t_{0},C_{1},\dots,C_{2s-1})
+\end{align}
+\]</span> 消去<span class="math inline">\(t+t_{0}\)</span>, 然后将<span
+class="math inline">\(C_{1},\dots\)</span> 表示成关于<span
+class="math inline">\(q_{i}和\dot{q}_{i}\)</span>的函数,
+这些函数就是运动积分. 然而并不是所有运动积分都由相同的重要性,
+有些运动积分来自拉格朗日函数的对称性这样的基本性质.</p>
+<p>如果拉格朗日量不显含时间, 即运动方程具有时间平移对称性,
+关于拉格朗日量的全导数可以写为 <span class="math display">\[
+\frac{\mathrm{d} L}{\mathrm{d} t}=\sum_{i}\frac{\partial L}{\partial
+q_{i}}\dot{q}_{i}+\sum_{i}\frac{\partial
+L}{\partial\dot{q}_{i}}\mathrm{d}ot{q}_{i}
+\]</span> 利用拉格朗日方程替换<span class="math inline">\(\partial
+L/\partial q_{i}\)</span> <span class="math display">\[
+\begin{align}
+\frac{\mathrm{d} L}{\mathrm{d}
+t}&amp;=\sum_{i}\frac{\mathrm{d}}{\mathrm{d} t}\frac{\partial
+L}{\partial\dot{q}_{i}}\dot{q}_{i}+\sum_{i}\frac{\partial
+L}{\partial\dot{q}_{i}}\mathrm{d}ot{q}_{i}\\
+&amp;=\sum_{i}\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{\partial
+L}{\partial\dot{q}_{i}}\dot{q}_{i}\right)
+\end{align}
+\]</span> 所以我们得到 <span class="math display">\[
+\frac{\mathrm{d}}{\mathrm{d} t}\left(\sum_{i}\dot{q}_{i}\frac{\partial
+L}{\partial\dot{q}_{i}}-L\right)=0
+\]</span> 由此可知 <span class="math display">\[
+E=\sum_{i}\dot{q}_{i}\frac{\partial L}{\partial\dot{q}_{i}}-L
+\]</span> 在运动中保持不变, 称为系统的能量.
+能量守恒的系统也称为保守系统.</p>
+<p>对于封闭的质点系, 拉格朗日量是动能减去势能 <span
+class="math display">\[
+L=T-U
+\]</span> 由于上一节提到, 动能是广义速度的二次型,
+换言之动能是关于广义速度的二次齐次函数 <span class="math display">\[
+T(\lambda\dot{q}_{1},\lambda\dot{q}_{2},\dots)=\lambda^{2}T(\dot{q}_{1},\dot{q}_{2},\dots)
+\]</span> 两边对<span class="math inline">\(\lambda\)</span>求导,
+最后取<span class="math inline">\(\lambda=1\)</span>, 我们得到 <span
+class="math display">\[
+\sum_{i}\dot{q}_{i}\frac{\partial T}{\partial\dot{q}_{i}}=2T
+\]</span> 利用这个恒等式, 我们得到 <span class="math display">\[
+E = T + U
+\]</span> 即封闭质点系的能量是动能加上势能.</p>
+<h2 id="动量">动量</h2>
+<p>另一个守恒律与空间平移对称性有关. 如果拉格朗日量关于空间平移不变,
+即所有坐标平移相同的无穷小位移<span
+class="math inline">\(\boldsymbol{\epsilon}\)</span>引起的拉格朗日量的变化
+<span class="math display">\[
+\delta L=\sum_{i}\frac{\partial
+L}{\partial\boldsymbol{r}_{i}}\cdot\delta\boldsymbol{r}_{i}=\boldsymbol{\epsilon}\cdot\sum_{i}\frac{\partial
+L}{\partial\boldsymbol{r}_{i}}
+\]</span> 为<span class="math inline">\(0\)</span>, 那么 <span
+class="math display">\[
+\sum_{i}\frac{\partial L}{\partial\boldsymbol{r}_{i}}=0
+\]</span> 根据拉格朗日方程 <span class="math display">\[
+\frac{\mathrm{d}}{\mathrm{d} t}\sum_{i}\frac{\partial
+L}{\partial\boldsymbol{v}_{i}}=0
+\]</span> 由此可知 <span class="math display">\[
+\boldsymbol{P}=\sum_{i}\frac{\partial
+L}{\partial\boldsymbol{v}_{i}}=\sum_{i}m\boldsymbol{v}_{i}
+\]</span> 在运动中守恒, 是运动积分, 称为系统的动量.
+上面的推导在拉格朗日量对于某个或者多个广义坐标平移不变时也同样成立,
+这样得到的动量称为广义动量.</p>
+<h2 id="角动量">角动量</h2>
+<p>空间旋转对称性蕴含角动量守恒. 假设径矢<span
+class="math inline">\(\boldsymbol{r}\)</span>与转轴<span
+class="math inline">\(\hat{\boldsymbol{n}}\)</span>之间的夹角为<span
+class="math inline">\(\theta\)</span>, 那么径矢在旋转过程中改变了 <span
+class="math display">\[
+|\delta\boldsymbol{r}|=r\sin\theta\delta\varphi
+\]</span> 写成矢量形式 <span class="math display">\[
+\delta\boldsymbol{r}=\delta\boldsymbol{\varphi}\times\boldsymbol{r}
+\]</span> 这里我们按照惯例取旋转角的方向为转轴方向<span
+class="math inline">\(\hat{\boldsymbol{n}}\)</span>. 在旋转过程中,
+速度也发生了改变 <span class="math display">\[
+\delta\boldsymbol{v}=\delta\boldsymbol{\varphi}\times\boldsymbol{v}
+\]</span> 因此拉格朗日量绕轴<span
+class="math inline">\(\hat{\boldsymbol{n}}\)</span>旋转<span
+class="math inline">\(\delta\varphi\)</span>角度不变意味着 <span
+class="math display">\[
+0=\frac{\partial L}{\partial\boldsymbol{\varphi}}=\sum_{i}\frac{\partial
+L}{\partial\boldsymbol{r}_{i}}\cdot\delta\boldsymbol{r}_{i}+\sum_{i}\frac{\partial
+L}{\partial\boldsymbol{v}_{i}}\cdot\delta\boldsymbol{v}_{i}=\delta\boldsymbol{\varphi}\cdot\sum_{i}\left(\boldsymbol{r}_{i}\times\frac{\partial
+L}{\partial\boldsymbol{r}_{i}}+\boldsymbol{v}_{i}\times\frac{\partial
+L}{\partial\boldsymbol{v}_{i}}\right)
+\]</span> 这里用到了矢量恒等式 <span class="math display">\[
+A\cdot(B\times C)=B\cdot(C\times A)
+\]</span> 做代换 <span class="math display">\[
+\frac{\partial
+L}{\partial\boldsymbol{r}_{i}}=\dot{\boldsymbol{p}}_{i}\qquad\frac{\partial
+L}{\partial\boldsymbol{v}_{i}}=\boldsymbol{p}_{i}
+\]</span> 这里<span
+class="math inline">\(\boldsymbol{p}_{i}\)</span>是第<span
+class="math inline">\(i\)</span>个质点的动量. 于是 <span
+class="math display">\[
+0=\delta\boldsymbol{\varphi}\cdot\sum_{i}\left(\boldsymbol{r}_{i}\times\dot{\boldsymbol{p}}_{i}+\dot{\boldsymbol{r}}_{i}\times\boldsymbol{p}_{i}\right)=\delta\boldsymbol{\varphi}\cdot\frac{\mathrm{d}}{\mathrm{d}
+t}\sum_{i}\boldsymbol{r}_{i}\times\boldsymbol{p}_{i}
+\]</span> 由<span
+class="math inline">\(\delta\boldsymbol{\varphi}\)</span>的任意性(这里的任意性指的是不仅仅转角大小是任意的,
+转轴选择也是任意的), 在运动过程中角动量矢量 <span
+class="math display">\[
+\boldsymbol{M}=\sum_{i}\boldsymbol{r}_{i}\times\boldsymbol{p}_{i}
+\]</span> 守恒. 如果拉氏量仅有关于某个特定转轴的对称性,
+角动量矢量本身不守恒, 但是沿着转轴方向的投影是守恒的. 需要注意的是,
+上述推导仅仅是为了导出笛卡尔坐标下的角动量表达式, 如果取旋转角<span
+class="math inline">\(\varphi\)</span>为广义坐标, 上一节的推导仍然适用,
+<span class="math inline">\(\partial
+L/\partial\dot{\varphi}\)</span>在运动过程中守恒,
+可见角动量守恒可以看成一种特殊的广义动量守恒.</p>
+<p>由于角动量的定义中出现了径矢, 定义依赖于坐标原点的选择,
+考虑坐标变换<span
+class="math inline">\(\boldsymbol{r}=\boldsymbol{r}&#39;+\boldsymbol{a}\)</span>,
+新老坐标系中的角动量之间有以下关系 <span class="math display">\[
+\boldsymbol{M}=\boldsymbol{M}&#39;+\boldsymbol{a}\times\sum_{i}\boldsymbol{p}_{i}
+\]</span> 所以仅当系统整体总动量为<span
+class="math inline">\(0\)</span>时,
+角动量的数值才不依赖坐标原点的选择.</p>
+<h2 id="力学相似性">力学相似性</h2>
+<p>由于拉格朗日量乘上一个常数不改变运动方程, 利用这一点,
+无需实际求解运动方程就可以得到关于运动性质的一些有用结论.</p>
+<p>假设质点系的势能函数是<span
+class="math inline">\(k\)</span>次齐次函数 <span class="math display">\[
+U(\lambda\boldsymbol{r}_{1},\lambda\boldsymbol{r}_{2},\dots)=\lambda^{k}U(\boldsymbol{r}_{1},\boldsymbol{r}_{2},\dots)
+\]</span> 现在考虑标度变换<span
+class="math inline">\(\boldsymbol{x}\mapsto\alpha\boldsymbol{x},t\mapsto\beta
+t\)</span>, 那么速度<span
+class="math inline">\(\boldsymbol{v}\mapsto\alpha/\beta\boldsymbol{v}\)</span>,
+动能变成原来的<span
+class="math inline">\(\alpha^{2}/\beta^{2}\)</span>倍,
+而势能变为原来的<span class="math inline">\(\alpha^{k}\)</span>倍, 如果
+<span class="math display">\[
+\frac{\alpha^{2}}{\beta^{2}}=\alpha^{k}
+\]</span> 即<span class="math inline">\(\beta=\alpha^{1-k/2}\)</span>,
+运动方程在标度变换下保持不变.
+这意味着运动方程的解在这样的标度变换下也保持不变.</p>
+<p>所有质点的坐标改变相同的倍数,
+意味着变换前后的运动轨迹在几何上是相似的. 根据上面的讨论,
+如果势能函数是齐次函数, 几何上相似的轨迹相应点的运动时间之比为 <span
+class="math display">\[
+\frac{t&#39;}{t}=\left(\frac{l&#39;}{l}\right)^{1-k/2}
+\]</span> 对于单摆运动<span class="math inline">\(k=2\)</span>,
+所以摆长和振荡周期无关; 对于开普勒运动<span
+class="math inline">\(k=-1\)</span>, 所以 <span class="math display">\[
+\frac{t&#39;}{t}=\left(\frac{l&#39;}{l}\right)^{3/2}
+\]</span> 这正是开普勒第三定律.</p>
+<h2 id="维里定律">维里定律</h2>
+<p>如果力学系统在有限的空间中运动, 并且势能是坐标的齐次函数,
+那么动能和势能的时间平均值之间存在非常简单的关系,
+这个关系称为维里定理.</p>
+<p>动能可以写为 <span class="math display">\[
+2T=\sum_{i}\frac{\partial
+T}{\partial\boldsymbol{v}_{i}}\cdot\boldsymbol{v}_{i}=\sum_{i}\boldsymbol{p}_{i}\cdot\boldsymbol{v}_{i}=\frac{\mathrm{d}}{\mathrm{d}
+t}\sum_{i}\boldsymbol{p}_{i}\cdot\boldsymbol{r}_{i}-\sum_{i}\dot{\boldsymbol{p}}_{i}\cdot\boldsymbol{r}_{i}
+\]</span> 对上式取时间平均 <span class="math display">\[
+\bar{f}=\lim_{\tau\to\infty}\frac{1}{\tau}\int_{0}^{\tau}f(t)\,\mathrm{d}
+t
+\]</span> 由于系统在有限的空间中运动, 第二项 <span
+class="math display">\[
+\lim_{\tau\to\infty}\frac{1}{\tau}\int_{0}^{\tau}\frac{\mathrm{d}}{\mathrm{d}
+t}\sum_{i}\boldsymbol{p}_{i}\cdot\boldsymbol{r}_{i}\,\mathrm{d}
+t=\lim_{\tau\to\infty}\frac{1}{\tau}\left.\sum_{i}\boldsymbol{p}_{i}\cdot\boldsymbol{r}_{i}\right|_{\tau}=0
+\]</span> 所以 <span class="math display">\[
+2\bar{T}=-\overline{\sum_{i}\dot{\boldsymbol{p}}_{i}\cdot\boldsymbol{r}_{i}}
+\]</span> 做代换<span
+class="math inline">\(\dot{\boldsymbol{p}}_{i}=-\partial
+U/\partial\boldsymbol{r}_{i}\)</span>, 再利用势能是坐标的<span
+class="math inline">\(k\)</span>次齐次函数, 我们得到 <span
+class="math display">\[
+2\bar{T}=\overline{\sum_{i}\boldsymbol{r}_{i}\cdot\frac{\partial
+U}{\partial\boldsymbol{r}_{i}}}=k\bar{U}
+\]</span> 或者可以用总能量将上面的表达式重写为 <span
+class="math display">\[
+\bar{U}=\frac{2}{k+2}E\qquad\bar{T}=\frac{k}{k+2}E
+\]</span> 对于牛顿引力势<span class="math inline">\(k=-1\)</span>,
+所以<span class="math inline">\(E=-\bar{T}\)</span>,
+这意味着只有当总能量为负值时运动才是有界的.</p>
+<h2 id="remark">Remark</h2>
+<p>很久之前第一次学习理论力学时,
+我觉得拉格朗日描述的主要优点在于将物理学家从受力分析中解放了出来.
+如今想想, 当时的认识还是过于狭隘了,
+拉格朗日描述的价值主要在于构造满足对称性的新理论.
+这节的内容表明了拉格朗日量本身具有的对称性能直接传递到运动方程上,
+因此只要拉格朗日量满足某些对称性, 运动方程的对称性自然得到了保证.</p>
+<p>然而, 从物理的角度, 我们不应该认为拉格朗日描述是更基本的,
+最基本的始终是运动方程. 从运动方程角度出发我们一样能研究解的性质
+(例如力学相似性), 并不需要写下拉格朗日量. 类似的,
+最小作用量原理是不包含物理内容的,
+它只是将运动方程以一种紧凑的形式编码成一个简单的标量函数,
+我相信其他形式的编码也是有可能的.</p>
+<p>另外我在撰写这两节的笔记时尽量避免提及, 时空均匀性,
+我认为这样的表述是物理学家之间的黑话,
+运动方程在时空平移变换下保持不变是更加清楚的表述.</p>
+<h2 id="参考文献">参考文献</h2>
+<p>[1] 朗道, 力学</p>
 ]]></content>
       <categories>
         <category>physics</category>
